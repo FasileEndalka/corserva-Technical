@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize-typescript";
-import { OrderItem } from "./models/OrderItem.model";
+import { OrderItem } from "./models/orderItem.model";
 
 export const sequelize = new Sequelize({
     database:'salesDB',

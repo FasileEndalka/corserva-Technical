@@ -1,5 +1,5 @@
 import express,{Request, Response} from "express";
-import {OrderItem} from "../models/OrderItem.model"
+import {OrderItem} from "../models/orderItem.model"
 import Joi from 'joi'
 
 const router = express.Router()
@@ -13,7 +13,6 @@ const orderItemSchema = Joi.object({
 })
 
 router.get("/", async(req: Request, res:Response) => {
-    console.log('req:',req)
     const orderItems = await OrderItem.findAll()
   
     res.send(orderItems)
@@ -36,7 +35,6 @@ router.delete('/:id', async (req, res) => {
 })
 
 router.post('/', async (req:Request, res: Response) => {
-    console.log("req:" , req)
     const {error, value} = orderItemSchema.validate(req.body)
     if(error){
         return res.status(400).send(error.details[0].message)
