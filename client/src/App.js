@@ -32,9 +32,11 @@ const App = () => {
 
   const updateItemList = async (data, id) => {
     if (isEdit) {
-      return await updateItem(data, id);
+      return await updateItem(data, id).then(() =>
+        setToggle((e) => !e)
+      );
     } else {
-      return await createItem(data);
+      return await createItem(data).then(() => setToggle((e) => !e));
     }
   };
 
@@ -45,12 +47,13 @@ const App = () => {
     setIsEdit(true);
   };
   const deleteHandler = async (record) => {
-    setToggle((e) => !e);
-    return await deleteItem(record);
+    return await deleteItem(record).then(() => {
+      setToggle((e) => !e);
+    });
   };
   useEffect(() => {
     fetchItems();
-  }, [showModal, toggle]);
+  }, [toggle]);
 
   const contextState = {
     data,

@@ -13,6 +13,7 @@ const Header = () => {
           onClick={() => {
             context.setShowModal(true);
             context.setSelectedRecord({});
+            context.setIsEdit(false);
           }}
         >
           Create Sales Item
