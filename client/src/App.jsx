@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Modal } from 'antd';
 import { createContext, useEffect, useState } from 'react';
 import {
@@ -6,9 +7,9 @@ import {
   getItem,
   updateItem,
 } from './api/itemApi';
-import Header from './components/Header.component';
-import ItemForm from './components/ItemForm.component';
-import TableComp from './components/Table.component';
+import Header from './components/Header/Header.component';
+import ItemForm from './components/Form/ItemForm.component';
+import TableComp from './components/Table/Table.component';
 
 export const ItemContext = createContext();
 

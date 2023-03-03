@@ -1,6 +1,6 @@
-import react, { useContext } from 'react';
+import { React, useContext } from 'react';
 import { Table, Popconfirm } from 'antd';
-import { ItemContext } from '../App';
+import { ItemContext } from '../../App';
 
 const TableComp = () => {
   const columns = [
@@ -58,7 +58,11 @@ const TableComp = () => {
   const context = useContext(ItemContext);
   return (
     <div>
-      <Table dataSource={context.data} columns={columns}></Table>
+      <Table
+        dataSource={context.data}
+        columns={columns}
+        rowKey={(record) => record.id}
+      ></Table>
     </div>
   );
 };

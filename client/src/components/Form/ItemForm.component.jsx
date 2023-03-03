@@ -1,6 +1,6 @@
 import { Input, Button, Form } from 'antd';
 import React, { useContext, useEffect } from 'react';
-import { ItemContext } from '../App';
+import { ItemContext } from '../../App';
 
 const ItemForm = () => {
   const context = useContext(ItemContext);
@@ -26,6 +26,7 @@ const ItemForm = () => {
       <div className="text-lg font-bold p-6 ">
         {context.isEdit ? `Update` : `Create`} Sales Item
       </div>
+      {console.log(context.selectedRecord, 'context.selectedRecord')}
       <Form
         form={form}
         onFinish={handleOnFinish}
@@ -106,6 +107,7 @@ const ItemForm = () => {
               <Button
                 className="bg-red-900 text-white"
                 htmlType="submit"
+                data-testid="create/update"
               >
                 {context.isEdit ? 'Update' : 'Create'}
               </Button>
