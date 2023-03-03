@@ -8,12 +8,12 @@ This is a web application that consists of a client and a server. The client is 
 
 Before running the application, you need to set the following environment variables in the .env file:
 
-`    DB_NAME=yourDBName
+`  DB_NAME=yourDBName
     DB_USER=yourUserName
     DB_PASSWORD=yourPassword
     DB_HOST=localhost
     DB_PORT=5432
-   `
+ `
 
 ## Getting Started
 
@@ -42,4 +42,4 @@ To use this Docker setup, follow these steps:
 
 ## Postman Collection
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://api.postman.com/collections/11870885-56e498f3-0c77-409d-8ab9-36cb1737d3e8?access_key=PMAT-01GTKMQTT1X0A1WSQEFTXFGJSX#?env%5Bmy-environment%5D=W10=)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://github.com/FasileEndalka/corserva-Technical/blob/main/postman.json#?env%5Bmy-environment%5D=W10=)
